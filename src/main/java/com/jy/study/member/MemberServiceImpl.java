@@ -2,7 +2,14 @@ package com.jy.study.member;
 
 public class MemberServiceImpl implements MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();  //구현 객체 직접 선택 => DIP 위반
+    private final MemberRepository memberRepository;
+
+
+
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
