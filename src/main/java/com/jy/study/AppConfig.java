@@ -8,26 +8,34 @@ import com.jy.study.member.MemberServiceImpl;
 import com.jy.study.member.MemoryMemberRepository;
 import com.jy.study.order.OrderService;
 import com.jy.study.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration  //스프링 컨테이너에 등록
 public class AppConfig {
 
+
+    //이렇게 등록한 빈들은 객체 생성과 관계 연결이 한번에 일어나게 된다.
+    //컴포넌트 스캔을 사용하게 되면 빈을 먼저 만들고 연결관계를 연결한다.
+    @Bean
     public MemberService memberService() {
-        return new MemberServiceImpl(getMemberRepository());
+        return new MemberServiceImpl(memberRepository());
     }
 
-
+    @Bean
     public OrderService orderService() {
-        return new OrderServiceImpl(getMemberRepository() , getDiscountPolicy());
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
-    //굳이 getter만드는 이유: 겹치는 코드 수정시 한번만 수정하기 위해서
-    private MemoryMemberRepository getMemberRepository() {
+    @Bean
+    public MemoryMemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
-    private DiscountPolicy getDiscountPolicy() {
+
+    @Bean
+    public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
 
-
-    
 }
