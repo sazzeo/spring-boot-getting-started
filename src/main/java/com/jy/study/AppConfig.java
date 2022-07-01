@@ -1,5 +1,6 @@
 package com.jy.study;
 
+import com.jy.study.aop.TimeTraceAop;
 import com.jy.study.discount.DiscountPolicy;
 import com.jy.study.discount.FixDiscountPolicy;
 import com.jy.study.discount.RateDiscountPolicy;
@@ -37,5 +38,13 @@ public class AppConfig {
     public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
+
+
+    //aop 빈으로 등록: @Component 안쓰는 이유 => 명시적으로 쓰려고
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }
+
 
 }
