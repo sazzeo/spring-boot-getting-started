@@ -1,12 +1,9 @@
-package com.jy.study;
+package com.jy.study.order;
 
+import com.jy.study.config.AppConfig;
 import com.jy.study.member.Grade;
 import com.jy.study.member.Member;
 import com.jy.study.member.MemberService;
-import com.jy.study.member.MemberServiceImpl;
-import com.jy.study.order.Order;
-import com.jy.study.order.OrderService;
-import com.jy.study.order.OrderServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

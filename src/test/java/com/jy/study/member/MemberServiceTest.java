@@ -1,6 +1,6 @@
 package com.jy.study.member;
 
-import com.jy.study.AppConfig;
+import com.jy.study.config.AppConfig;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;

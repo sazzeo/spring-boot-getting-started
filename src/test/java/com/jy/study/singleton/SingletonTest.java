@@ -1,6 +1,6 @@
 package com.jy.study.singleton;
 
-import com.jy.study.AppConfig;
+import com.jy.study.config.AppConfig;
 import com.jy.study.member.MemberService;
 import com.jy.study.member.MemberServiceImpl;
 import com.jy.study.order.OrderServiceImpl;

@@ -1,19 +1,14 @@
 package com.jy.study.beanfind;
 
 
-import com.jy.study.AppConfig;
-import com.jy.study.member.MemberRepository;
+import com.jy.study.config.AppConfig;
 import com.jy.study.member.MemberService;
 import com.jy.study.member.MemberServiceImpl;
-import com.jy.study.member.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import org.junit.jupiter.api.DisplayName;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;

@@ -1,10 +1,8 @@
 package com.jy.study.beanfind;
 
-import com.jy.study.AppConfig;
 import com.jy.study.member.MemberRepository;
 import com.jy.study.member.MemoryMemberRepository;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

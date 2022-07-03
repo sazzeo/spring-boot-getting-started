@@ -1,6 +1,6 @@
 package com.jy.study.singleton;
 
-import com.jy.study.AppConfig;
+import com.jy.study.config.AppConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

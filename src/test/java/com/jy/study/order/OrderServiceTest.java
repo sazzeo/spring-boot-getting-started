@@ -1,6 +1,6 @@
 package com.jy.study.order;
 
-import com.jy.study.AppConfig;
+import com.jy.study.config.AppConfig;
 import com.jy.study.member.Grade;
 import com.jy.study.member.Member;
 import com.jy.study.member.MemberService;

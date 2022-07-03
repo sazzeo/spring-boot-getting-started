@@ -1,9 +1,6 @@
-package com.jy.study;
+package com.jy.study.member;
 
-import com.jy.study.member.Grade;
-import com.jy.study.member.Member;
-import com.jy.study.member.MemberService;
-import com.jy.study.member.MemberServiceImpl;
+import com.jy.study.config.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

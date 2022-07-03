@@ -1,4 +1,4 @@
-package com.jy.study;
+package com.jy.study.config;
 
 import com.jy.study.aop.TimeTraceAop;
 import com.jy.study.discount.DiscountPolicy;
