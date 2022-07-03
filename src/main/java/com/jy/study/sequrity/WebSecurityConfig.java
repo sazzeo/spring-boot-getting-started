@@ -1,9 +1,13 @@
 package com.jy.study.sequrity;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 //스프링 시큐리티 기본 설정 등록
@@ -23,6 +27,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic(); //httpBasic도 사용할것임.
     }
 
+
+
+    //아무런 패스워드 인코딩도 하지 않을때 => 그냥 패스워드 쓸 때  절대 쓰면 안됨!!
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return NoOpPasswordEncoder.getInstance();
+//    }
+
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
 
     //원래 메소드드
 //   protected void configure(HttpSecurity http) throws Exception {
